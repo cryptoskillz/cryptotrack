@@ -3,7 +3,8 @@
 
 
 
-                        <h3>Add an asset</h3>
+                        <h3>Add an asset       </i>
+</h3>
                         <p>Add an asset to your portfolio </p>
                         <div class="f1-steps">
                           <div class="f1-progress">
@@ -14,8 +15,8 @@
                             <p>Asset</p>
                           </div>
                           <div class="f1-step" id="step2">
-                            <div class="f1-step-icon"><i class="fa fa-key"></i></div>
-                            <p>account</p>
+                            <div class="f1-step-icon"><i class="fa fa-info"></i></div>
+                            <p>Details</p>
                           </div>
                             <div class="f1-step" id="step3">
                             <div class="f1-step-icon"><i class="fa fa-twitter"></i></div>
@@ -44,6 +45,18 @@
                                 <label for="datetimepicker1">Date Bought</label>
 
                                 <div class='input-group date ' id='datetimepicker1'>
+
+                                    <input type='text' class="form-control" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+
+                             <div class="form-group" id="formDateSold" >
+                                <label for="datetimepicker2">Date Ends</label>
+
+                                <div class='input-group date ' id='datetimepicker2'>
 
                                     <input type='text' class="form-control" />
                                     <span class="input-group-addon">

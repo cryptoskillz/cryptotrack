@@ -7,4 +7,5 @@
   <link href="<?php echo base_url();?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
   <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  
+  <link rel="stylesheet" href="<?php echo base_url();?>assets/webfont/cryptocoins.css">
+  <link href="<?php echo base_url();?>assets/css/sb-admin.css" rel="stylesheet">

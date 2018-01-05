@@ -10,9 +10,7 @@
   <!-- Custom styles for this page-->
   <link rel="stylesheet" href="<?php echo base_url();?>assets/addwizard/css/form-elements.css">
   <link rel="stylesheet" href="<?php echo base_url();?>assets/addwizard/css/style.css">
-
-   <link href="<?php echo base_url();?>assets/css/sb-admin.css" rel="stylesheet">
-   <link href="<?php echo base_url();?>assets/datetimepicker/css/bootstrap-datetimepicker-standalone.css" rel="stylesheet" >
+  <link href="<?php echo base_url();?>assets/datetimepicker/css/bootstrap-datetimepicker-standalone.css" rel="stylesheet" >
 
 
 
@@ -75,8 +73,10 @@
     <footer class="sticky-footer">
       <div class="container">
         <div class="text-center">
-          <small>CryptoSkillz 2017</small>
-        </div>
+    <?php
+      $this->load->view ('includes/default/footer');
+    ?>  
+            </div>
       </div>
     </footer>
     <!-- Scroll to Top Button-->

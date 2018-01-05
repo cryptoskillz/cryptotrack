@@ -9,14 +9,13 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <title>CryptoSKillz</title>
-  <!-- Bootstrap core CSS-->
-  <link href="<?php echo base_url();?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom fonts for this template-->
-  <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <?php
+    $this->load->view ('includes/default/header');
+  ?>      
+  
   <!-- Page level plugin CSS-->
   <link href="<?php echo base_url();?>assets/datatables/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
-  <link href="<?php echo base_url();?>assets/css/sb-admin.css" rel="stylesheet">
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -72,36 +71,42 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
+                  <th>Type</th>
                   <th>Asset</th>
-                  <th>Amount</th>
-                  <th>Purcahse Assets</th>
-                  <th>Num Purchases</th>
+                  <th>Holdings</th>
                   <th>Profit</th>
-                  <th>Now</th>
+                  <th>Pairs</th>
+                  <th>Purchases</th>
+                  <th>Current Price</th>
                   <th>Actions</th>
                 </tr>
               </thead>
               <tfoot>
                 <tr>
+                  <th>Type</th>
                   <th>Asset</th>
-                  <th>Amount</th>
-                  <th>Purcahse Assets</th>
-                  <th>Num Purchases</th>    
+                  <th>Holdings</th>
                   <th>Profit</th>
-                  <th>Now</th>
+                  <th>Pairs</th>
+                  <th>Purchases</th>
+                  <th>Current Price</th>
                   <th>Actions</th>
                 </tr>
               </tfoot>
               <tbody>
                 <tr>
-                  <td>BTC</td>
-                  <td>100</td>
+                  <td>Coin</td>
+                  <td><i class="cc BTC" title="BTC"> BTC</i></td>
+                  <td>$15,0000 (1)</td>
+                  <td>$124.20 (+10%)</td>
                   <td>USD,BCH</td>
                   <td>56</td>
-                  <td>$124.20 (+10%)</td>
                   <td>$13,0000 (+23%)</td>
                   <!-- TODO (Chris) make this code come from the buy type -->
-                  <td><a href="trades/btc"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+                  <td>
+                  <a href="trades/btc"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                  <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -114,7 +119,9 @@
     <footer class="sticky-footer">
       <div class="container">
         <div class="text-center">
-          <small>CryptoSkillz 2017</small>
+         <?php
+      $this->load->view ('includes/default/copyright');
+    ?> 
         </div>
       </div>
     </footer>
@@ -140,16 +147,9 @@
         </div>
       </div>
     </div>
-    <!-- Bootstrap core JavaScript-->
-    <script src="<?php echo base_url();?>assets/jquery/jquery.min.js"></script>
-    <script src="<?php echo base_url();?>assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Core plugin JavaScript-->
-    <script src="<?php echo base_url();?>assets/jquery-easing/jquery.easing.min.js"></script>
-    <!-- Page level plugin JavaScript-->
-    <script src="<?php echo base_url();?>assets/datatables/jquery.dataTables.js"></script>
-    <script src="<?php echo base_url();?>assets/datatables/dataTables.bootstrap4.js"></script>
-    <!-- Custom scripts for all pages-->
-    <script src="<?php echo base_url();?>assets/js/sb-admin.min.js"></script>
+     <?php
+      $this->load->view ('includes/default/footer');
+    ?>  
     <!-- Custom scripts for this page-->
     <script src="<?php echo base_url();?>assets/js/sb-admin-datatables.min.js"></script>
   </div>

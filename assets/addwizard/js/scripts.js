@@ -28,8 +28,8 @@ $(function () {
         {
             
             //alert(assetType)            
-            //bar_progress(300, 'right');   
-            //scroll_to_class( $('.f1'), 20 );
+            bar_progress(300, 'right');   
+            scroll_to_class( $('.f1'), 20 );
      
         }        
     }
@@ -45,18 +45,25 @@ $(function () {
 jQuery(document).ready(function() {
 
     //init
-      $('#formDateBought').hide();
+    $('#formDateBought').hide();
+    $('#formDateSold').hide();
 
 
     //check for asset type
     $( "#formAssetType" ).change(function() {
        //check what was selected
             var assetType = $('#formAssetType').val();
+            $('#formDateBought').show()
+                
             //check if its clound mining
             if (assetType == "cm")
             {
-                $('#formDateBought').show()
+                $('#formDateSold').show()
                 
+            }
+            else
+            {
+                $('#formDateSold').hide()
             }
     });
 
