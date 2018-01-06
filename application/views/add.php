@@ -8,9 +8,9 @@
   ?>      
   
   <!-- Custom styles for this page-->
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/addwizard/css/form-elements.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/addwizard/css/style.css">
-  <link href="<?php echo base_url();?>assets/datetimepicker/css/bootstrap-datetimepicker-standalone.css" rel="stylesheet" >
+  <link rel="stylesheet" href="assets/addwizard/css/form-elements.css">
+  <link rel="stylesheet" href="assets/addwizard/css/style.css">
+  <link href="assets/datetimepicker/css/bootstrap-datetimepicker-standalone.css" rel="stylesheet" >
 
 
 
@@ -112,13 +112,13 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
 
-  <script src="<?php echo base_url();?>assets/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+  <script src="assets/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.8.0/parsley.min.js"></script>
     <!-- Custom scripts for this page-->
-   <script src="<?php echo base_url();?>assets/addwizard/js/jquery.backstretch.min.js"></script>
-   <script src="<?php echo base_url();?>assets/addwizard/js/retina-1.1.0.min.js"></script>
-   <script src="<?php echo base_url();?>assets/addwizard/js/scripts.js"></script>
+   <script src="assets/addwizard/js/jquery.backstretch.min.js"></script>
+   <script src="assets/addwizard/js/retina-1.1.0.min.js"></script>
+   <script src="assets/addwizard/js/scripts.js"></script>
   </div>
 </body>
 

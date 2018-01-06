@@ -151,7 +151,7 @@
       $this->load->view ('includes/default/footer');
     ?>  
     <!-- Custom scripts for this page-->
-    <script src="<?php echo base_url();?>assets/js/sb-admin-datatables.min.js"></script>
+    <script src="assets/js/sb-admin-datatables.min.js"></script>
   </div>
 </body>
 
