@@ -5,6 +5,7 @@
   <meta name="author" content="">
   <title>CryptoSKillz</title>
   <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  
   <!-- Custom fonts for this template-->
   <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="assets/webfont/cryptocoins.css">
