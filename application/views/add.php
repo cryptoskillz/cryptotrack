@@ -52,7 +52,7 @@
     </div>
   </nav>
   <div class="content-wrapper">
-    <div class="container-fluid">
+    <div class="container-fluid page-content">
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">

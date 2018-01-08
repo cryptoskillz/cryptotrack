@@ -6,7 +6,7 @@
                         <h3>Add an asset       </i>
 </h3>
                         <p>Add an asset to your portfolio </p>
-                        <div class="f1-steps">
+                        <div class="f1-steps ">
                           <div class="f1-progress">
                               <div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3" style="width: 16.66%;"></div>
                           </div>
@@ -37,6 +37,7 @@
                                   <option value="hm">Hardware Mining</option>
                                   <option value="coin">Coin</option>
                                   <option value="ico">ICO</option>
+                                   <option value="stk">Staking</option>
                                 </select>
                             </div>
                            
