@@ -19,8 +19,8 @@
                             <p>Details</p>
                           </div>
                             <div class="f1-step" id="step3">
-                            <div class="f1-step-icon"><i class="fa fa-twitter"></i></div>
-                            <p>social</p>
+                            <div class="f1-step-icon"><i class="fa fa-check"></i></div>
+                            <p>Finish</p>
                           </div>
                         </div>
                          <form role="form" action="" method="post" class="f1" id="f1" data-parsley-validate="">
@@ -79,17 +79,41 @@
                                     
                                     </select>
                                 </div>
-
-
-                                    
-                               
-                                
+                               <div class="form-group" id="cloudmininghashpower"> 
+                                  <!-- auto populate -->
+                                  <label for="cloudminerhashpower">Hashpower</label>
+                                  <input type="text" name="cloudminerhashpower" placeholder="Enter the hashpower" class="form-control" id="cloudminerhashpower">  
+                                  <label for="cloudminerfee">Fees</label>
+                                  <input type="text" name="cloudminerfee" placeholder="Enter the fee" class="form-control" id="cloudminerfee">                                    
+                                  <label for="cloudminerfee">Cost</label>
+                                    <input type="text" name="cloudminercost" placeholder="Enter the cost" class="form-control" id="cloudminercost">      
+                                  </div>
                             </div>
+
+                            <div id="wizardstep2payment">
                           
+                              <div class="form-group">
+                                  <label for="formHowDidYouPay">How did you pay?</label>
+                                  <select class="form-control" id="formHowDidYouPay" required="">
+
+                                 </select>
+                                </div>
+                            </div>
+
+                            <div id="wizardsummary">
+                          
+                              <div class="form-group">
+                                Add it    
+                              </div>
+                            </div>
                                 
                                     <div class="f1-buttons">
-
+                                        <!-- parsely validator
                                         <button type="submit" class="btn btn-next " value="validate">Next</button>
+                                         -->
+                                        <button type="button" class="btn btn-next " value="validate" id="nextbutton" name="nextbutton">Next</button>
+                                        <button type="button" class="btn btn-next " value="validate" id="addbutton" name="addbutton">Add</button>
+
                                     </div>
                                 </fieldset>
                         </form>

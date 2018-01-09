@@ -8,22 +8,46 @@ function scroll_to_class(element_class, removed_height) {
 	}
 }
 
-function bar_progress(progress, direction) {
-    if (atStep == 1)
+function bar_progress() {
+    if (atStep == 2)
     {
-        new_value =50;
-        $('.f1-progress').attr('style', 'width: ' + progress + '%;').data('now-value', progress);
+
+        $('.f1-progress').attr('style', 'width: 300%;').data('now-value', 300);
         $('#step1').removeClass('active');
         $('#step1').removeClass('activated');
         $('#step2').addClass('active');  
+
     }
-	
+    if (atStep == 3)
+    {
+        $('.f1-progress').attr('style', 'width: 500%;').data('now-value', 500);
+        $('#step2').removeClass('active');
+        $('#step2').removeClass('activated');
+        $('#step3').addClass('active');
+        $('#nextbutton').hide();
+        $('#addbutton').show();
+
+    }
 }
 
+
+/* to add parsely validation
 $(function () {
   $('#f1').parsley().on('field:validated', function() {
     if ($('.parsley-error').length === 0)
     {
+         alert(atStep)
+        if (atStep == 2)
+        {
+
+           //hide step 1
+           $('#wizardstep1').hide();
+           //hide step 2
+           $('#wizardstep2cloudmining').hide();
+           //show final step
+           $('#wizardsummary').show();
+        }     
+
         if (atStep == 1)
         {
             //hide step 1
@@ -38,7 +62,8 @@ $(function () {
             scroll_to_class( $('.f1'), 20 );
             atStep = 2;
      
-        }        
+        }  
+
     }
     return false; // Don't submit form for this demo
 
@@ -47,6 +72,7 @@ $(function () {
     return false; // Don't submit form for this demo
   });
 });
+*/
 
 
 jQuery(document).ready(function() {
@@ -55,6 +81,49 @@ jQuery(document).ready(function() {
     $('#formDateBought').hide();
     $('#formDateSold').hide();
     $('#wizardstep2cloudmining').hide();
+    $('#cloudmininghashpower').hide();
+    $('#wizardstep2payment').hide();
+    $('#wizardsummary').hide();
+    $('#addbutton').hide();
+  
+
+    
+    $( "#nextbutton" ).click(function() {
+        if (atStep == 2)
+        {
+
+           //hide step 1
+           $('#wizardstep1').hide();
+           //hide step 2
+           $('#wizardstep2cloudmining').hide();
+           //show final step
+           $('#wizardsummary').show();
+           $('#wizardstep2payment').hide();
+           atStep = 3;
+           bar_progress();   
+           scroll_to_class( $('.f1'), 40 );
+           
+
+        }     
+
+        if (atStep == 1)
+        {
+            //hide step 1
+            $('#wizardstep1').hide()
+            //show step 2 
+            //init step 2
+            $('#cloudminingcontractsgroup').hide();
+            $('#wizardstep2cloudmining').show()
+
+            //alert(assetType)  
+            atStep = 2;          
+            bar_progress();   
+            scroll_to_class( $('.f1'), 20 );
+            
+     
+        }  
+
+    });
 
 
     //check for asset type
@@ -88,29 +157,56 @@ jQuery(document).ready(function() {
         //genesis
         if (miningtype == "1")
         {
-                            alert('sssss');
-
-            var option = document.createElement("option");
-            option.text = "Kiwi";
-            option.value = "gah"
-                    alert('sss');
-
-            $('#cloudminingcontracts').add(option);
-
+            $('#cloudminingcontracts').empty()
+            $('#cloudminingcontracts').append('<option value="" >Please Select</option>')
+            $('#cloudminingcontracts').append('<option value="bitcoin" >Bitcoin</option>')
+            $('#cloudminingcontracts').append('<option value="litecoin" >Litecoin</option>')
+            $('#cloudminingcontracts').append('<option value="dash" >Dash</option>')
+            $('#cloudminingcontracts').append('<option value="ether" >Ether</option>')
+            $('#cloudminingcontracts').append('<option value="zcash" >Zcash</option>')
+            $('#cloudminingcontracts').append('<option value="monero" >Monero</option>')           
             
         }
 
         //hashflare
         if (miningtype == "2")
         {
-            $('#formDateSold').show()
-            
+            $('#cloudminingcontracts').empty()
+            $('#cloudminingcontracts').append('<option value="" >Please Select</option>')
+            $('#cloudminingcontracts').append('<option value="bitcoin" >Bitcoin</option>')
+            $('#cloudminingcontracts').append('<option value="litecoin" >Litecoin</option>')
+            $('#cloudminingcontracts').append('<option value="dash" >Dash</option>')
+            $('#cloudminingcontracts').append('<option value="ether" >Ether</option>')
+            $('#cloudminingcontracts').append('<option value="zcash" >Zcash</option>')
+            $('#cloudminingcontracts').append('<option value="monero" >Monero</option>')             
         }
 
-
-
-        //populate the select
+        //show the options
         $('#cloudminingcontractsgroup').show()
+    });
+
+    //cloud mining seleted
+    $( "#cloudminingcontracts" ).change(function() {
+       
+         //show the options
+        $('#cloudmininghashpower').show();
+
+        $('#formHowDidYouPay').empty()
+        $('#formHowDidYouPay').append('<option value="" >Please Select</option>')
+        
+        //genesis
+        if ($('#formCloudMiningProvider').val() == "1")
+        {
+            $('#formHowDidYouPay').append('<option value="creditcard" >Credit Card</option>')
+            $('#formHowDidYouPay').append('<option value="bitcoin" >Bitcoin</option>')   
+            $('#formHowDidYouPay').append('<option value="bitcoincash" >Bitcoin Cash</option>')           
+            $('#formHowDidYouPay').append('<option value="dash" >Dash</option>')           
+            $('#formHowDidYouPay').append('<option value="litecoin" >Litecoin</option>')           
+            $('#formHowDidYouPay').append('<option value="dogecoin" >Dogecoin</option>')           
+
+        }
+
+        $('#wizardstep2payment').show();
     });
 
 
