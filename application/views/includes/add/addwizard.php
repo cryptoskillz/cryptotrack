@@ -23,66 +23,78 @@
                             <p>social</p>
                           </div>
                         </div>
-                                              <form role="form" action="" method="post" class="f1" id="f1" data-parsley-validate="">
-
-                        <fieldset>
-                            <h4>Select Asset:</h4>
-                            <div class="form-group">
-
-                            <!-- asset Type -->
-                            <label for="formAssetType">Asset Type</label>
-                                <select class="form-control" id="formAssetType" required="">
-                                  <option value="">Please Select</option>
-                                  <option value="cm">Cloud Mining Contract</option>
-                                  <option value="hm">Hardware Mining</option>
-                                  <option value="coin">Coin</option>
-                                  <option value="ico">ICO</option>
-                                   <option value="stk">Staking</option>
-                                </select>
-                            </div>
-                           
-                            <!-- for cloud mining contracts -->
-                             <div class="form-group" id="formDateBought" >
-                                <label for="datetimepicker1">Date Bought</label>
-
-                                <div class='input-group date ' id='datetimepicker1'>
-
-                                    <input type='text' class="form-control" />
-                                    <span class="input-group-addon">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                                    </span>
-                                </div>
-                            </div>
-
-                             <div class="form-group" id="formDateSold" >
-                                <label for="datetimepicker2">Date Ends</label>
-
-                                <div class='input-group date ' id='datetimepicker2'>
-
-                                    <input type='text' class="form-control" />
-                                    <span class="input-group-addon">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                                    </span>
-                                </div>
-                            </div>
-
-                            </form>
-
-                      
+                         <form role="form" action="" method="post" class="f1" id="f1" data-parsley-validate="">
+                          <fieldset>
+                         <div id="wizardstep1">
                             
-                                <div class="f1-buttons">
-
-                                    <button type="submit" class="btn btn-next " value="validate">Next</button>
+                                <h4>Select Asset:</h4>
+                                <div class="form-group">
+                                <!-- asset Type -->
+                                <label for="formAssetType">Asset Type</label>
+                                    <select class="form-control" id="formAssetType" required="">
+                                      <option value="">Please Select</option>
+                                      <option value="cm">Cloud Mining Contract</option>
+                                      <option value="hm">Hardware Mining</option>
+                                      <option value="coin">Coin</option>
+                                      <option value="ico">ICO</option>
+                                       <option value="stk">Staking</option>
+                                    </select>
                                 </div>
-                            </fieldset>
+                                <!-- for cloud mining contracts -->
+                                 <div class="form-group" id="formDateBought" >
+                                    <label for="datetimepicker1">Date Bought</label>
+                                    <div class='input-group date ' id='datetimepicker1'>
+                                        <input type='text' class="form-control" />
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                 <div class="form-group" id="formDateSold" >
+                                    <label for="datetimepicker2">Date Ends (optional) </label>
 
-                            <fieldset>
-                               
-                            </fieldset>
+                                    <div class='input-group date ' id='datetimepicker2'>
 
-                            <fieldset>
+                                        <input type='text' class="form-control" />
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="wizardstep2cloudmining">
+                                <h4>Cloud Mining Information:</h4>
+                                <div class="form-group">
+                                    <label for="formCloudMiningProvider">Mining Provider</label>
+                                    <select class="form-control" id="formCloudMiningProvider" required="">
+                                      <option value="">Please Select</option>
+                                      <option value="1">Genesis</option>
+                                      <option value="2">Hashflare</option>
+                                    </select>
+                                </div>
+                               <div class="form-group" id="cloudminingcontractsgroup"> 
+                                    <label for="cloudminingcontracts">Contract</label>
+                                    <select class="form-control" id="cloudminingcontracts" required="">
+                                    
+                                    </select>
+                                </div>
+
+
+                                    
                                
-                            </fieldset>
+                                
+                            </div>
+                          
+                                
+                                    <div class="f1-buttons">
+
+                                        <button type="submit" class="btn btn-next " value="validate">Next</button>
+                                    </div>
+                                </fieldset>
+                        </form>
+
+
                       
                     </div>
                 </div>

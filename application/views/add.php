@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="assets/addwizard/css/style.css">
   <link href="assets/datetimepicker/css/bootstrap-datetimepicker-standalone.css" rel="stylesheet" >
 
-
+<link href="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
 
 
 

@@ -26,10 +26,17 @@ $(function () {
     {
         if (atStep == 1)
         {
-            
+            //hide step 1
+            $('#wizardstep1').hide()
+            //show step 2 
+            //init step 2
+            $('#cloudminingcontractsgroup').hide();
+            $('#wizardstep2cloudmining').show()
+
             //alert(assetType)            
             bar_progress(300, 'right');   
             scroll_to_class( $('.f1'), 20 );
+            atStep = 2;
      
         }        
     }
@@ -47,6 +54,7 @@ jQuery(document).ready(function() {
     //init
     $('#formDateBought').hide();
     $('#formDateSold').hide();
+    $('#wizardstep2cloudmining').hide();
 
 
     //check for asset type
@@ -67,6 +75,46 @@ jQuery(document).ready(function() {
             }
     });
 
+    //cloud mining seleted
+    $( "#formCloudMiningProvider" ).change(function() {
+
+        //1 = genesis
+        //2 = hasflare
+        var miningtype = $('#formCloudMiningProvider').val();
+            
+        //check if its clound mining
+
+        //todo (chris) get these from an automatic source
+        //genesis
+        if (miningtype == "1")
+        {
+                            alert('sssss');
+
+            var option = document.createElement("option");
+            option.text = "Kiwi";
+            option.value = "gah"
+                    alert('sss');
+
+            $('#cloudminingcontracts').add(option);
+
+            
+        }
+
+        //hashflare
+        if (miningtype == "2")
+        {
+            $('#formDateSold').show()
+            
+        }
+
+
+
+        //populate the select
+        $('#cloudminingcontractsgroup').show()
+    });
+
+
+
     /*
         Fullscreen background
     */
@@ -86,48 +134,9 @@ jQuery(document).ready(function() {
     
     $('#datetimepicker1').datetimepicker();
     
-     /*
+    
     
 
-       
-    	
-
-       
-    	// fields validation
-        //todo (chris) make this work for selects
-    	parent_fieldset.find('select, input[type="text"], input[type="password"], textarea').each(function() {
-    		if( $(this).val() == "" ) {
-    			$(this).addClass('input-error');
-    			next_step = false;
-    		}
-    		else {
-    			$(this).removeClass('input-error');
-    		}
-    	});
-    	// fields validation
-
-    	if( next_step ) {
-    		parent_fieldset.fadeOut(400, function() {
-    			// change icons
-    			current_active_step.removeClass('active').addClass('activated').next().addClass('active');
-    			// progress bar
-    			bar_progress(progress_line, 'right');
-    			// show next step
-	    		$(this).next().fadeIn();
-	    		// scroll window to beginning of the form
-    			scroll_to_class( $('.f1'), 20 );
-	    	});
-    	}
-       
-         
-    	
-    });
-     */
-    
-    
-    
-    	
-   // });
     
     
 });
