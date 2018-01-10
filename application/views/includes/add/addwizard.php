@@ -43,7 +43,7 @@
                                 <!-- for cloud mining contracts -->
                                  <div class="form-group" id="formDateBought" >
                                     <label for="datetimepicker1">Date Bought</label>
-                                    <div class='input-group date ' id='datetimepicker1'>
+                                    <div class='input-group date ' id='datetimepicker1' >
                                         <input type='text' class="form-control" />
                                         <span class="input-group-addon">
                                             <span class="glyphicon glyphicon-calendar"></span>
@@ -52,9 +52,7 @@
                                 </div>
                                  <div class="form-group" id="formDateSold" >
                                     <label for="datetimepicker2">Date Ends (optional) </label>
-
-                                    <div class='input-group date ' id='datetimepicker2'>
-
+                                    <div class='input-group date ' id='datetimepicker2' >
                                         <input type='text' class="form-control" />
                                         <span class="input-group-addon">
                                             <span class="glyphicon glyphicon-calendar"></span>
@@ -103,7 +101,22 @@
                             <div id="wizardsummary">
                           
                               <div class="form-group">
-                                Add it    
+                               <!-- hold the summary -->
+                                  <div>Asset Type :<span id="assettypesummary"></span></div>
+                                  <div>Start Date :<span id="startdatesummary"></span></div>
+                                  <div>End Date :<span id="enddatesummary"></span></div>
+                                  <div>Mining Provider:<span id="miningprovidersummary"></span></div>
+                                  <div>Contract Type:<span id="contracttypesummary"></span></div>
+                                  <div>Hashpower:<span id="hashpowersummary"></span></div>
+                                  <div>Fees:<span id="feessummary"></span></div>
+                                  <div>Cost:<span id="costssummary"></span></div>
+                                  <div>Purchase Method:<span id="purchasemethodsummary"></span></div>
+                                  <div id='cloundminingsummaryinfo'>
+                                    The cloud mining contract will be treated as income and show up in your income section.  We will calculate the daily income based that days 
+                                    difficulty. However you override this with your own figure if you please. You will also show you when this contract is estimated to become profitable 
+                                    when it actually is.
+                                  </div>
+
                               </div>
                             </div>
                                 

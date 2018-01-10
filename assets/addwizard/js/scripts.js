@@ -85,12 +85,19 @@ jQuery(document).ready(function() {
     $('#wizardstep2payment').hide();
     $('#wizardsummary').hide();
     $('#addbutton').hide();
+    $('#wizardsummary').hide();
+
+
   
 
     
     $( "#nextbutton" ).click(function() {
         if (atStep == 2)
         {
+
+            //output vars
+            var assetoutput = ''
+
 
            //hide step 1
            $('#wizardstep1').hide();
@@ -102,6 +109,41 @@ jQuery(document).ready(function() {
            atStep = 3;
            bar_progress();   
            scroll_to_class( $('.f1'), 40 );
+
+           //check out which one to show
+           var assetType = $('#formAssetType').val();
+            //check if its clound mining
+            if (assetType == "cm")
+            {
+                $('#assettypesummary').text('Clound Mining Contract')
+                $('#startdatesummary').text($('#datetimepicker1').find("input").val());
+                $('#enddatesummary').text($('#datetimepicker2').find("input").val());
+                //todo (chris) refactor this 
+                var cmps = '';
+                if ($('#formCloudMiningProvider').val() == 1)
+                    cmps = "Genesis"
+                if ($('#formCloudMiningProvider').val() == 1)
+                    cmps = "Hashflare"
+
+                $('#miningprovidersummary').text(cmps);
+                $('#contracttypesummary').text($('#cloudminingcontracts').val() );
+
+                $('#hashpowersummary').text($('#cloudminerhashpower').val())
+                $('#feessummary').text($('#cloudminerfee').val());
+                $('#costssummary').text($('#cloudminercost').val());
+                $('#purchasemethodsummary').text($('#formHowDidYouPay').val() );
+
+                
+                
+
+
+
+                $('#wizardsummary').show()
+
+                
+            }
+           
+           
            
 
         }     
@@ -229,7 +271,8 @@ jQuery(document).ready(function() {
     $('.f1 fieldset:first').fadeIn('slow');
     
     $('#datetimepicker1').datetimepicker();
-    
+    $('#datetimepicker2').datetimepicker();
+  
     
     
 
