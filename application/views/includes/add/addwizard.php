@@ -64,7 +64,7 @@
                             <div id="wizardstep2cloudmining">
                                 <h4>Cloud Mining Information:</h4>
                                 <div class="form-group">
-                                    <label for="formCloudMiningProvider">Mining Provider</label>
+                                    <label for="formCloudMiningProvider">Mining Type</label>
                                     <select class="form-control" id="formCloudMiningProvider" required="">
                                       <option value="">Please Select</option>
                                       <option value="1">Genesis</option>
@@ -84,8 +84,33 @@
                                   <label for="cloudminerfee">Fees</label>
                                   <input type="text" name="cloudminerfee" placeholder="Enter the fee" class="form-control" id="cloudminerfee">                                    
                                   <label for="cloudminerfee">Cost</label>
-                                    <input type="text" name="cloudminercost" placeholder="Enter the cost" class="form-control" id="cloudminercost">      
-                                  </div>
+                                  <input type="text" name="cloudminercost" placeholder="Enter the cost" class="form-control" id="cloudminercost">      
+                              </div>
+                            </div>
+
+
+                            <div id="wizardstep2hardwaremining">
+                                <h4>Hardware Mining Information:</h4>
+                                <div class="form-group">
+                                    <label for="formHardwareMiningType">Mining Type</label>
+                                    <select class="form-control" id="formHardwareMiningType" required="">
+                                      <option value="">Please Select</option>
+                                      <option value="scrypt">Scrypt</option>
+                                      <option value="ethash">Ethash</option>
+                                    </select>
+                                </div>
+                              
+                               <div class="form-group" id="cloudmininghashpower"> 
+                                  <!-- auto populate -->
+                                  <label for="hardwareminername">Name</label>
+                                  <input type="text" name="hardwareminername" placeholder="Enter the name" class="form-control" id="hardwareminername">  
+                                  <label for="hardwareminerhashpower">Hashpower</label>
+                                  <input type="text" name="hardwareminerhashpower" placeholder="Enter the hashpower" class="form-control" id="hardwareminerhashpower">  
+                                  <label for="hardwareminerfee">Fees</label>
+                                  <input type="text" name="hardwareminerfee" placeholder="Enter the fee" class="form-control" id="hardwareminerfee">                                    
+                                  <label for="hardwareminerfee">Cost</label>
+                                  <input type="text" name="hardwareminercost" placeholder="Enter the cost" class="form-control" id="hardwareminercost">      
+                              </div>
                             </div>
 
                             <div id="wizardstep2payment">
@@ -113,6 +138,11 @@
                                   <div>Purchase Method:<span id="purchasemethodsummary"></span></div>
                                   <div id='cloundminingsummaryinfo'>
                                     The cloud mining contract will be treated as income and show up in your income section.  We will calculate the daily income based that days 
+                                    difficulty. However you override this with your own figure if you please. You will also show you when this contract is estimated to become profitable 
+                                    when it actually is.
+                                  </div>
+                                  <div id='harddminingsummaryinfo'>
+                                    The hardware mining device will be treated as income and show up in your income section.  We will calculate the daily income based that days 
                                     difficulty. However you override this with your own figure if you please. You will also show you when this contract is estimated to become profitable 
                                     when it actually is.
                                   </div>
