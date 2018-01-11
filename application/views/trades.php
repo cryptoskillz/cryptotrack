@@ -10,13 +10,13 @@
   <meta name="author" content="">
   <title>CryptoSKillz</title>
   <!-- Bootstrap core CSS-->
-  <link href="<?php echo base_url();?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
-  <link href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <!-- Page level plugin CSS-->
-  <link href="<?php echo base_url();?>assets/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <link href="/assets/datatables/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
-  <link href="<?php echo base_url();?>assets/css/sb-admin.css" rel="stylesheet">
+  <link href="/assets/css/sb-admin.css" rel="stylesheet">
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -166,17 +166,17 @@
       </div>
     </div>
     <!-- Bootstrap core JavaScript-->
-    <script src="<?php echo base_url();?>assets/jquery/jquery.min.js"></script>
-    <script src="<?php echo base_url();?>assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/jquery/jquery.min.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Core plugin JavaScript-->
-    <script src="<?php echo base_url();?>assets/jquery-easing/jquery.easing.min.js"></script>
+    <script src="/assets/jquery-easing/jquery.easing.min.js"></script>
     <!-- Page level plugin JavaScript-->
-    <script src="<?php echo base_url();?>assets/datatables/jquery.dataTables.js"></script>
-    <script src="<?php echo base_url();?>assets/datatables/dataTables.bootstrap4.js"></script>
+    <script src="/assets/datatables/jquery.dataTables.js"></script>
+    <script src="/assets/datatables/dataTables.bootstrap4.js"></script>
     <!-- Custom scripts for all pages-->
-    <script src="<?php echo base_url();?>assets/js/sb-admin.min.js"></script>
+    <script src="/assets/js/sb-admin.min.js"></script>
     <!-- Custom scripts for this page-->
-    <script src="<?php echo base_url();?>assets/js/sb-admin-datatables.min.js"></script>
+    <script src="/assets/js/sb-admin-datatables.min.js"></script>
   </div>
 </body>
 

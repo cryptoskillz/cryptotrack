@@ -66,10 +66,34 @@
                             <div id="wizardstep2coin">
                                 <h4>Coin Information:</h4>
                                 <div class="form-group">
-                                    <label for="formCoinExchange">Coin</label>
+                                    <label for="formCoinType">Coin Type</label>
+                                    <select class="form-control" id="formCoinType" required="">
+                                    </select>
+                                </div>
+                                <div class="form-group" id="coinexchangegroup">
+                                    <label for="formCoinExchange">Exchange </label>
                                     <select class="form-control" id="formCoinExchange" required="">
                                     </select>
                                 </div>
+
+                                <div class="form-group" id="coindetailsroup">
+                                  <!-- auto populate -->
+                                  <label for="cloudminerhashpower">Quantity</label>
+                                  <input type="text" name="coinquantity" placeholder="Enter the quantity" class="form-control" id="coinquantity">  
+                                  <label for="cloudminerfee">Fees (*to get from exchange)</label>
+                                  <input type="text" name="coinexchangefee" placeholder="Enter the fee" class="form-control" id="coinexchangefee">                                    
+                                  <label for="cloudminerfee">Price  (*to get from exchange)</label>
+                                  <input type="text" name="coinexchangeprice" placeholder="Enter the price" class="form-control" id="coinexchangeprice">  
+                                  <label for="formcoinhowtopay">Payment Type</label>
+                                    <select class="form-control" id="formcoinhowtopay" required="">
+                                      <option value="">Please Select</option>
+                                      <option value="1">Portfolio (BTC) </option>
+                                      <option value="2">Portfolio (LTC)</option>
+                                      <option value="2">Cold storage (BTC)</option>
+                                      <option value="2">Cold storage (LTC)</option>
+                                     
+                                    </select> 
+                                </div>   
                             </div>
 
                             <div id="wizardstep2cloudmining">

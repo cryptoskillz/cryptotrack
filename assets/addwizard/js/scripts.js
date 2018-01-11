@@ -187,11 +187,15 @@ jQuery(document).ready(function() {
             }
             if (assetType == "coin")  
             {
+                //hide the exchnages
+                $('#coinexchangegroup').hide();
+                //hide the details
+                $('#coindetailsroup').hide();
                 //populate the drop down
-                $('#formCoinExchange').empty();
-                $('#formCoinExchange').append('<option value="" >Please select</option>')
+                $('#formCoinType').empty();
+                $('#formCoinType').append('<option value="" >Please select</option>')
                 $.each(coinlist, function(i, item) {
-                    $('#formCoinExchange').append('<option value="'+ item.symbol +'" >'+ item.id +' ('+item.symbol+')' +'</option>')
+                    $('#formCoinType').append('<option value="'+ item.symbol +'" >'+ item.id +' ('+item.symbol+')' +'</option>')
 
                    // console.log(i + " : " + item.id + " : "+ item.symbol)
                 });
@@ -215,10 +219,26 @@ jQuery(document).ready(function() {
     });
 
     //check for a coin slection
-    
-    $("#formCoinExchange" ).change(function() {
+    $("#formCoinType" ).change(function() {
         //alert($(this).val())
+         $('#coinexchangegroup').show();
+         $('#formCoinExchange').empty();
+         $('#formCoinExchange').append('<option value="" >Please select</option>')
+         $.each(exchangelist, function(i, item) {
+            $('#formCoinExchange').append('<option value="'+ item.id +'" >'+ item.name +'</option>')
+
+           // console.log(i + " : " + item.id + " : "+ item.symbol)
+        });
     });
+
+
+    //check for a exchange slection
+    $("#formCoinExchange" ).change(function() {
+        $('#coindetailsroup').show();
+    });
+
+
+    
 
 
     //check for asset type

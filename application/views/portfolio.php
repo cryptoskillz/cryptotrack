@@ -14,7 +14,7 @@
   ?>      
   
   <!-- Page level plugin CSS-->
-  <link href="<?php echo base_url();?>assets/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <link href="assets/datatables/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
 </head>
 
@@ -37,6 +37,32 @@
           <a href="#">Portfolio</a>
         </li>
       </ol>
+      <div class="row">
+        <div class="col-xl-3 col-sm-6 mb-3">
+          <div class="card text-white bg-primary o-hidden h-100">
+            <div class="card-body">
+              <div class="card-body-icon">
+                <i class="fa fa-fw fa-bitcoin"></i>
+              </div>
+              <div class="mr-5">Portfolio total value 4.3 BTC</div>
+            </div>
+           
+          </div>
+        </div>
+        
+      
+        <div class="col-xl-3 col-sm-6 mb-3">
+          <div class="card text-white bg-danger o-hidden h-100">
+            <div class="card-body">
+              <div class="card-body-icon">
+                <i class="fa fa-fw fa-bitcoin"></i>
+              </div>
+              <div class="mr-5">Portfolio trading amount 1.2 BTC</div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
