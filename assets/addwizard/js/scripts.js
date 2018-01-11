@@ -1,6 +1,7 @@
 
 var atStep = 1;
-console.log(coinlist)
+//debug
+//console.log(coinlist)
 
 function scroll_to_class(element_class, removed_height) {
 	var scroll_to = $(element_class).offset().top - removed_height;
@@ -111,6 +112,10 @@ jQuery(document).ready(function() {
 
             //check out which one to show
             var assetType = $('#formAssetType').val();
+            $('#quantitydiv').hide();
+            $('#cointypediv').hide();
+            $('#exchangetypediv').hide();
+              
             //check if its clound mining
             if (assetType == "cm")
             {
@@ -154,9 +159,45 @@ jQuery(document).ready(function() {
                 $('#harddminingsummaryinfo').show();
                 $('#cloundminingsummaryinfo').hide();
 
+
                 
             }
-           
+
+            if (assetType == "coin")
+            {
+                $('#assettypesummary').text('Coing from Exchnage');
+                $('#startdatesummary').text($('#datetimepicker1').find("input").val());
+                $('#summaryenddatediv').hide();
+                $('#contracttypediv').hide();
+                $('#miningroviderdiv').hide();
+                $('#hashpowerdiv').hide();
+                $('#cloundminingsummaryinfo').hide();
+                $('#harddminingsummaryinfo').hide();
+                
+                $('#startdatesummary').text($('#datetimepicker1').find("input").val());
+                $('#quantitysummary').text($('#coinquantity').val());
+                $('#cointypesummary').text($('#formCoinType').val());
+                $('#exchangetypedsummary').text($('#coinexchangefee').val());
+                $('#feessummary').text($('#coinexchangefee').val());
+                $('#costssummary').text($('#coinexchangeprice').val());
+
+                /* refactor this so it gets it from the API*/
+                if ($('#formcoinhowtopay').val()  == 1)
+                    $('#purchasemethodsummary').text("Portfolio (BTC)");
+                if ($('#formcoinhowtopay').val()  == 2)
+                    $('#purchasemethodsummary').text("Portfolio (LTC)");                
+                if ($('#formcoinhowtopay').val()  == 3)
+                    $('#purchasemethodsummary').text("Cold storage (BTC)");                
+                if ($('#formcoinhowtopay').val()  == 4)
+                    $('#purchasemethodsummary').text("Cold storage (LTC)");
+
+
+                $('#wizardstep2coin').hide();
+                $('#wizardsummary').show();
+                
+
+
+            }          
         }     
 
         if (atStep == 1)

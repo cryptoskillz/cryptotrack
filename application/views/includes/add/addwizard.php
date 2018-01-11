@@ -89,12 +89,15 @@
                                       <option value="">Please Select</option>
                                       <option value="1">Portfolio (BTC) </option>
                                       <option value="2">Portfolio (LTC)</option>
-                                      <option value="2">Cold storage (BTC)</option>
-                                      <option value="2">Cold storage (LTC)</option>
+                                      <option value="3">Cold storage (BTC)</option>
+                                      <option value="4">Cold storage (LTC)</option>
                                      
                                     </select> 
                                 </div>   
                             </div>
+
+
+
 
                             <div id="wizardstep2cloudmining">
                                 <h4>Cloud Mining Information:</h4>
@@ -164,11 +167,14 @@
                                <!-- hold the summary -->
                                   <div>Asset Type :<span id="assettypesummary"></span></div>
                                   <div>Start Date :<span id="startdatesummary"></span></div>
-                                  <div>End Date :<span id="enddatesummary"></span></div>
-                                  <div>Mining Provider:<span id="miningprovidersummary"></span></div>
-                                  <div>Contract Type:<span id="contracttypesummary"></span></div>
-                                  <div>Hashpower:<span id="hashpowersummary"></span></div>
-                                  <div>Fees:<span id="feessummary"></span></div>
+                                  <div id="summaryenddatediv">End Date :<span id="enddatesummary"></span></div>
+                                  <div id="miningroviderdiv">Mining Provider:<span id="miningprovidersummary"></span></div>
+                                  <div id="contracttypediv">Contract Type:<span id="contracttypesummary"></span></div>
+                                  <div id="hashpowerdiv">Hashpower:<span id="hashpowersummary"></span></div>
+                                  <div id="quantitydiv">Quantity:<span id="quantitysummary"></span></div>
+                                  <div id="cointypediv">Coin:<span id="cointypesummary"></span></div>
+                                  <div id="exchangetypediv">Exchange:<span id="exchangetypedsummary"></span></div>
+                                  <div id="feesummary">Fees:<span id="feessummary"></span></div>
                                   <div>Cost:<span id="costssummary"></span></div>
                                   <div>Purchase Method:<span id="purchasemethodsummary"></span></div>
                                   <div id='cloundminingsummaryinfo'>
