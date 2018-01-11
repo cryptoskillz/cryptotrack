@@ -228,6 +228,9 @@ jQuery(document).ready(function() {
             }
             if (assetType == "coin")  
             {
+                $('#quantitydiv').show();
+                $('#cointypediv').show();
+                $('#exchangetypediv').show();
                 //hide the exchnages
                 $('#coinexchangegroup').hide();
                 //hide the details
