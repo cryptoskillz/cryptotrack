@@ -6,13 +6,24 @@
             <span class="nav-link-text">Dashboard</span>
           </a>
         </li>
-   <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Assets">
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Assets">
           <a class="nav-link" href="/portfolio">
             <i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">Portfolio</span>
           </a>
-        </li>     
-       
+      </li>  
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Assets">
+          <a class="nav-link" href="/fiat">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">Fiat On Ramp</span>
+          </a>
+      </li>          
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Assets">
+          <a class="nav-link" href="/coldstorage">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">Cold Storage</span>
+          </a>
+      </li>       
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">
@@ -27,4 +38,5 @@
             <i class="fa fa-fw fa-sign-out"></i>Logout</a>
         </li>
       </ul>
+
     </div>
