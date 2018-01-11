@@ -34,7 +34,7 @@
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="/dashboard">Dashboard</a>
+          <a href="/dashboard">Portfolio</a>
         </li>
         <li class="breadcrumb-item active">Add</li>
 

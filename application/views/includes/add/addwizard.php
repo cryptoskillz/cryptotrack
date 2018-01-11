@@ -61,6 +61,17 @@
                                 </div>
                             </div>
 
+
+
+                            <div id="wizardstep2coin">
+                                <h4>Coin Information:</h4>
+                                <div class="form-group">
+                                    <label for="formCoinExchange">Coin</label>
+                                    <select class="form-control" id="formCoinExchange" required="">
+                                    </select>
+                                </div>
+                            </div>
+
                             <div id="wizardstep2cloudmining">
                                 <h4>Cloud Mining Information:</h4>
                                 <div class="form-group">

@@ -1,5 +1,6 @@
 
 var atStep = 1;
+console.log(coinlist)
 
 function scroll_to_class(element_class, removed_height) {
 	var scroll_to = $(element_class).offset().top - removed_height;
@@ -88,6 +89,9 @@ jQuery(document).ready(function() {
     $('#wizardsummary').hide();
     $('#wizardstep2cloudmining').hide();
     $('#wizardstep2hardwaremining').hide();
+    $('#wizardstep2coin').hide();
+
+
 
     
     $( "#nextbutton" ).click(function() {
@@ -180,7 +184,22 @@ jQuery(document).ready(function() {
                 $('#formHowDidYouPay').append('<option value="litecoin" >Litecoin</option>')           
                 $('#formHowDidYouPay').append('<option value="dogecoin" >Dogecoin</option>')       
                 $('#wizardstep2payment').show();
-            }           
+            }
+            if (assetType == "coin")  
+            {
+                //populate the drop down
+                $('#formCoinExchange').empty();
+                $('#formCoinExchange').append('<option value="" >Please select</option>')
+                $.each(coinlist, function(i, item) {
+                    $('#formCoinExchange').append('<option value="'+ item.symbol +'" >'+ item.id +' ('+item.symbol+')' +'</option>')
+
+                   // console.log(i + " : " + item.id + " : "+ item.symbol)
+                });
+                
+                //wizardstep2coin
+                $('#wizardstep2coin').show();
+
+            }         
             //show step 2 
             //init step 2
            
@@ -193,6 +212,12 @@ jQuery(document).ready(function() {
      
         }  
 
+    });
+
+    //check for a coin slection
+    
+    $("#formCoinExchange" ).change(function() {
+        //alert($(this).val())
     });
 
 

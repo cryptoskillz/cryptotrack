@@ -36,7 +36,7 @@
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="#">Dashboard</a>
+          <a href="#">Portfolio</a>
         </li>
       </ol>
       <!-- Example DataTables Card-->
