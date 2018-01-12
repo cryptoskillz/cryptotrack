@@ -80,7 +80,9 @@
                                   <!-- auto populate -->
                                   <label for="cloudminerhashpower">Quantity</label>
                                   <input type="text" name="coinquantity" placeholder="Enter the quantity" class="form-control" id="coinquantity">  
-                                  <label for="cloudminerfee">Fees (*to get from exchange)</label>
+                                  <label for="cointoexchangefee">Fees (*to get to exchange)</label>
+                                  <input type="text" name="cointoexchangefee" placeholder="Enter the fee" class="form-control" id="cointoexchangefee"> 
+                                  <label for="coinexchangefee">Fees (*to get from exchange)</label>
                                   <input type="text" name="coinexchangefee" placeholder="Enter the fee" class="form-control" id="coinexchangefee">                                    
                                   <label for="cloudminerfee">Price  (*to get from exchange)</label>
                                   <input type="text" name="coinexchangeprice" placeholder="Enter the price" class="form-control" id="coinexchangeprice">  
@@ -93,7 +95,21 @@
                                       <option value="4">Cold storage (LTC)</option>
                                      
                                     </select> 
-                                </div>   
+                               
+                                  <label for="formcoinhowtopay">Price  (*to get from exchange)</label>
+
+                                <input type="text" name="formcoinhowtopay" placeholder="Enter the price" class="form-control" id="coinexchangeprice">  
+                                  <label for="formcoinhowtopay">Where is it?</label>
+                                    <select class="form-control" id="formcoinhowtopay" required="">
+                                      <option value="">Please Select</option>
+                                      <option value="1">Portfolio </option>
+                                      <option value="3">Cold storage</option>
+                                       <option value="4">Hot Wallet</option>
+                                      <option value="5">On Exchange</option>
+                                       <option value="6">Coins property wallet</option>
+                                    
+                                    </select> 
+                                </div>                                  
                             </div>
 
 

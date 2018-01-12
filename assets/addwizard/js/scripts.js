@@ -115,6 +115,10 @@ jQuery(document).ready(function() {
             $('#quantitydiv').hide();
             $('#cointypediv').hide();
             $('#exchangetypediv').hide();
+
+            //add these to summary
+            //cointoexchangefee
+            //formcoinhowtopay  
               
             //check if its clound mining
             if (assetType == "cm")
