@@ -2,6 +2,7 @@
   "use strict"; // Start of use strict
 
 
+
   $("#logoutbutton").click(function() {
     lscache.set('loggedin', {'state':"0"});
     window.location.href = "/login";
@@ -57,7 +58,8 @@
 
 
 
-
+  console.log("dd")
+  console.log(cashexchangelist);
 //local storage stuff
 
 
