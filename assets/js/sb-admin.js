@@ -77,28 +77,44 @@ else
 {
   var key = 'loggedin';
   var json = lscache.get(key);
-  //console.log(json)
+  //console.log("json"+json)
 
   ///var account = lscache.get("account");
   //console.log(account);
-  if (json.state == 0) 
+  if (json == null)
   {
-    //alert('no account')
-    //redirect them to login
-    if (window.location.href.indexOf("login") !=-1) 
-    {
-      //do nothing
-      //alert('login page')
-    }
-    else
-    {
-      window.location.href = "/login";
-    }
-  
-
-  } 
-  else 
-  {
-    //alert('accunt')
+        if (window.location.href.indexOf("login") !=-1) 
+        {
+          //do nothing
+          //alert('login page')
+        }
+        else
+        {
+          window.location.href = "/login";
+        }
   }
+  else
+  {
+    if (json.state == 0)
+      {
+        //alert('no account')
+        //redirect them to login
+        if (window.location.href.indexOf("login") !=-1) 
+        {
+          //do nothing
+          //alert('login page')
+        }
+        else
+        {
+          window.location.href = "/login";
+        }
+      
+
+      } 
+      else 
+      {
+        //alert('accunt')
+      }
+  }
+  
 }

@@ -116,16 +116,23 @@
           $("#seederror").text("")
          if (theseed != "")
          {
-           if (theseed == json.account)
-           {  
-             lscache.set('loggedin', {'state':"1"});
-             window.location.href = "/dashboard";
-           }
-           else
-           {
-             $("#seederror").text("Seeds do not match")
-        
-           }
+          if (json != null)
+          {
+             if (theseed == json.account)
+             {  
+               lscache.set('loggedin', {'state':"1"});
+               window.location.href = "/dashboard";
+             }
+             else
+             {
+               $("#seederror").text("Seeds do not match")
+          
+             }
+          }
+          else
+          {
+            $("#seederror").text("Seeds do not match")
+          }
          
         }
         else
