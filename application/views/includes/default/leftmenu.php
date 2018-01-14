@@ -7,7 +7,7 @@
           </a>
         </li>
        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Assets">
-          <a class="nav-link" href="/fiat">
+          <a class="nav-link" href="/cash">
             <i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">Cash Purchases</span>
           </a>
