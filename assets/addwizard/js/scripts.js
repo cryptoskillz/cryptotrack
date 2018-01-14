@@ -117,7 +117,7 @@ jQuery(document).ready(function() {
             $('#exchangetypediv').hide();
 
             //add these to summary
-            
+
             //cointoexchangefee
             //formcoinhowtopay  
               
@@ -390,7 +390,7 @@ jQuery(document).ready(function() {
     /*
         Fullscreen background
     */
-    $.backstretch("assets/img/backgrounds/1.jpg");
+    $.backstretch("../../assets/img/backgrounds/1.jpg");
     
     $('#top-navbar-1').on('shown.bs.collapse', function(){
     	$.backstretch("resize");

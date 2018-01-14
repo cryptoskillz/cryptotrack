@@ -8,7 +8,30 @@ class Cash extends CI_Controller {
 
 	public function index()
 	{
-		$data = "";
-		$this->load->view('cash',$data);
+		$segment = $this->uri->segment(2);
+		echo $segment;
+		if ($segment == "")
+		{
+			$data = "";
+			$this->load->view('/cash/index',$data);
+		}
+		else
+		{
+			echo 'ddd';
+
+			if ($segment == "buy")
+			{
+				$data = "";
+				$this->load->view('/cash/buy',$data);
+			}
+			if ($segment == "sell")
+			{
+				$data = "";
+				$this->load->view('/cash/sell',$data);
+			}					
+		}
+		
+		
+
 	}
 }
