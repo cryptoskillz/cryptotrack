@@ -76,14 +76,10 @@
     <a class="scroll-to-top rounded" href="#page-top">
       <i class="fa fa-angle-up"></i>
     </a>
-    <!-- Logout Modal-->
-     <?php
-          $this->load->view ('includes/default/logoutmodal');
-        ?> 
-
-     <?php
+    <?php
+      $this->load->view ('includes/default/logoutmodal');
       $this->load->view ('includes/default/footer');
-    ?>  
+    ?> 
     <!-- Custom scripts for this page-->
     <script src="assets/js/sb-admin-datatables.min.js"></script>
     <script src="assets/js/mnemonic.js"></script>

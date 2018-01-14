@@ -6,6 +6,12 @@
             <span class="nav-link-text">Dashboard</span>
           </a>
         </li>
+       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Assets">
+          <a class="nav-link" href="/fiat">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">Cash Purchases</span>
+          </a>
+      </li>        
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Assets">
           <a class="nav-link" href="/portfolio">
             <i class="fa fa-fw fa-dashboard"></i>
@@ -18,12 +24,7 @@
             <span class="nav-link-text">Income</span>
           </a>
       </li>        
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Assets">
-          <a class="nav-link" href="/fiat">
-            <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">Fiat On Ramp</span>
-          </a>
-      </li>          
+         
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Assets">
           <a class="nav-link" href="/coldstorage">
             <i class="fa fa-fw fa-dashboard"></i>
