@@ -117,6 +117,7 @@ jQuery(document).ready(function() {
             $('#exchangetypediv').hide();
 
             //add these to summary
+            
             //cointoexchangefee
             //formcoinhowtopay  
               

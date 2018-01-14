@@ -1,5 +1,14 @@
 (function($) {
   "use strict"; // Start of use strict
+
+
+  $("#logoutbutton").click(function() {
+    lscache.set('loggedin', {'state':"0"});
+    window.location.href = "/login";
+
+  });
+
+
   // Configure tooltips for collapsed side navigation
   $('.navbar-sidenav [data-toggle="tooltip"]').tooltip({
     template: '<div class="tooltip navbar-sidenav-tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
@@ -13,6 +22,7 @@
   });
   // Force the toggled class to be removed when a collapsible nav link is clicked
   $(".navbar-sidenav .nav-link-collapse").click(function(e) {
+
     e.preventDefault();
     $("body").removeClass("sidenav-toggled");
   });
@@ -43,3 +53,52 @@
     event.preventDefault();
   });
 })(jQuery); // End of use strict
+
+
+
+
+
+//local storage stuff
+
+
+function processJSON(json) {
+  // ..
+}
+
+function fetchJSON() {
+ 
+}
+
+/*note (chris) quick ls test pad this out in the future */
+if (!lscache.supported()) {
+  alert('Local storage is unsupported in this browser');
+}
+else
+{
+  var key = 'loggedin';
+  var json = lscache.get(key);
+  //console.log(json)
+
+  ///var account = lscache.get("account");
+  //console.log(account);
+  if (json.state == 0) 
+  {
+    //alert('no account')
+    //redirect them to login
+    if (window.location.href.indexOf("login") !=-1) 
+    {
+      //do nothing
+      //alert('login page')
+    }
+    else
+    {
+      window.location.href = "/login";
+    }
+  
+
+  } 
+  else 
+  {
+    //alert('accunt')
+  }
+}
