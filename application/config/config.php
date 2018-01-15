@@ -23,8 +23,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
-//$config['base_url'] = 'http://cryptoskillzwallet/';
+
+/* todo (chris) configure this via CI */
+$config['base_url'] = 'http://cryptoskillzwallet.gopagoda.io/'; //dev
+//$config['base_url'] = 'http://cryptoskillzwallet/'; //local
 
 /*
 |--------------------------------------------------------------------------
