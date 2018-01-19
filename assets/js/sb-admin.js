@@ -58,8 +58,8 @@
 
 
 
-  console.log("dd")
-  console.log(cashexchangelist);
+  //console.log("dd")
+  //console.log(cashexchangelist);
 //local storage stuff
 
 

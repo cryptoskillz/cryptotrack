@@ -47,7 +47,7 @@
               <div class="card-body-icon">
                 <i class="fa fa-fw fa-money"></i>
               </div>
-              <div class="mr-5">Cash Deposited £4,800</div>
+              <div class="mr-5">Cash Deposited £<span id="totaldeposited"></span></div>
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@
               <div class="card-body-icon">
                 <i class="fa fa-fw fa-money"></i>
               </div>
-              <div class="mr-5">Cash Withdrawn £1,800</div>
+              <div class="mr-5">Cash Withdrawn £<span id="totalwithdrawn"></span></div>
             </div>
           </div>
         </div> 
@@ -70,10 +70,10 @@
               </div>
               <div class="mr-5">
                 Assets Purchased<br>
-                BTC 1.3<br>
-                LTC 96<br>
-                ETH 42.1<br>
-                BCH 12.6<br>
+                BTC <span id="btcpurchase"></span><br>
+                LTC <span id="ltcpurchase"></span><br>
+                ETH <span id="ethpurchase"></span><br>
+                BCH <span id="bchpurchase"></span><br>
 
               </div>
             </div>
@@ -88,10 +88,10 @@
               </div>
               <div class="mr-5">
                 Assets Sold<br>
-                BTC 0.6<br>
-                LTC 2.1<br>
-                ETH 6.4<br>
-                BCH 3.5<br>
+                BTC <span id="btcsell"></span><br>
+                LTC <span id="ltcsell"></span><br>
+                ETH <span id="ethsell"></span><br>
+                BCH <span id="bchsell"></span><br>
               </div>
             </div>
           </div>
@@ -102,17 +102,14 @@
       <div class="card mb-3">
         <div class="card-header">
           <i class="fa fa-money"></i> Cash time line
-          <a class="pull-right btn btn-danger" href="cash/sell">SELL</a>
-
-          <a class="pull-right btn btn-primary" href="cash/buy">BUY</a>
-
+          <a class="pull-right btn btn-primary" href="cash/action">Action</a>
         </div>
 
         </div>
         <div class="card-body">
-          <div class="timeline-centered">
+          <div class="timeline-centered" id="timeline-centered">
 
-              <!-- articles -->
+              <!-- articles 
               <article class="timeline-entry">
                   <div class="timeline-entry-inner">
                     <time class="timeline-time" datetime="2014-01-10T03:45"> <span>3:35 PM</span><span>1/14/2018</span></time>
@@ -192,6 +189,8 @@
                   </div>
                 </div>
               </article>
+
+              -->
           </div>   
         </div>
       </div>
@@ -235,8 +234,7 @@
       $this->load->view ('includes/default/footer');
     ?> 
     <!-- Custom scripts for this page-->
-    <script src="/assets/js/sb-admin-datatables.min.js"></script>
-    <script src="/assets/js/cash.js"></script>
+    <script src="<?php echo base_url();?>assets/js/cash/index.js"></script>
 
   </div>
 </body>

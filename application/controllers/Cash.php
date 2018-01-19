@@ -17,18 +17,12 @@ class Cash extends CI_Controller {
 		}
 		else
 		{
-			echo 'ddd';
 
-			if ($segment == "buy")
+			if ($segment == "action")
 			{
 				$data = "";
-				$this->load->view('/cash/buy',$data);
-			}
-			if ($segment == "sell")
-			{
-				$data = "";
-				$this->load->view('/cash/sell',$data);
-			}					
+				$this->load->view('/cash/action',$data);
+			}								
 		}
 		
 		

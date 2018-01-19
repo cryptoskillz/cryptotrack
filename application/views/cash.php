@@ -102,9 +102,8 @@
       <div class="card mb-3">
         <div class="card-header">
           <i class="fa fa-money"></i> Cash time line
-          <a class="pull-right btn btn-danger" href="cash/sell">SELL</a>
+          <a class="pull-right btn btn-danger" href="cash/action">ACTION</a>
 
-          <a class="pull-right btn btn-primary" href="cash/buy">BUY</a>
 
         </div>
 
