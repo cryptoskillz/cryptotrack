@@ -3,6 +3,10 @@ var atStep = 1;
 //debug
 //console.log(coinlist)
 
+var key = 'portfolio';
+var portfolio = lscache.get(key);
+//console.log(portfolio)
+
 function scroll_to_class(element_class, removed_height) {
 	var scroll_to = $(element_class).offset().top - removed_height;
 	if($(window).scrollTop() != scroll_to) {
@@ -91,6 +95,49 @@ jQuery(document).ready(function() {
     $('#wizardstep2cloudmining').hide();
     $('#wizardstep2hardwaremining').hide();
     $('#wizardstep2coin').hide();
+
+
+    
+    //add it to the database.
+    $( "#addbutton" ).click(function() {
+        //alert('add')
+
+        var obj = {}
+        //process the coin
+         var assetType = $('#formAssetType').val();
+        if (assetType == "coin")
+        {
+            obj.assettype = 'Coin';
+            obj.startdate = $('#datetimepicker1').find("input").val();
+            obj.enddate = $('#datetimepicker2').find("input").val();
+            obj.quantity = $('#coinquantity').val();
+            obj.cointype = $('#formCoinType').val();
+            obj.exchnage = $('#coinexchangefee').val();
+            obj.fee = $('#coinexchangefee').val();
+            obj.cost = $('#coinexchangeprice').val();
+            /* refactor this so it gets it from the API*/
+            if ($('#formcoinhowtopay').val()  == 1)
+               obj.paidfrom = "Portfolio (BTC)"
+            if ($('#formcoinhowtopay').val()  == 2)
+                obj.paidfrom = "Portfolio (LTC)"                
+            if ($('#formcoinhowtopay').val()  == 3)
+               obj.paidfrom = "Cold storage (BTC)";                
+            if ($('#formcoinhowtopay').val()  == 4)
+                obj.paidfrom = "Cold storage (LTC)"
+
+            var tmpObj = [];
+            if (portfolio != null)
+            {
+                tmpObj = JSON.parse(portfolio);
+            }
+            tmpObj.push(obj);
+            //console.log(tmpObj)
+            portfolio = JSON.stringify(tmpObj);
+            lscache.set('portfolio',portfolio);
+
+
+        }  
+    });
 
 
 

@@ -2,7 +2,6 @@
     <script src="<?php echo base_url();?>assets/js/data/coinlist.js"></script>
     <script src="<?php echo base_url();?>assets/js/data/exchangelist.js"></script>
     <script src="<?php echo base_url();?>assets/js/data/cashexchangelist.js"></script>
-   
     <script src="<?php echo base_url();?>assets/jquery/jquery.min.js"></script>
     <script src="<?php echo base_url();?>assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="<?php echo base_url();?>assets/jquery-easing/jquery.easing.min.js"></script>
@@ -11,5 +10,6 @@
     <script src="<?php echo base_url();?>assets/js/lscache.js"></script>
     <!-- during dev no min, to add to CI -->
     <!--<script src="assets/js/sb-admin.min.js"></script>-->
+    <!--<script src="<?php echo base_url();?>assets/js/lockr.js"></script>   -->
     <script src="<?php echo base_url();?>assets/js/sb-admin.js"></script>
 

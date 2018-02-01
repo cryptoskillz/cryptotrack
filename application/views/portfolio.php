@@ -98,20 +98,7 @@
                 </tr>
               </tfoot>
               <tbody>
-                <tr>
-                  <td>Coin</td>
-                  <td><i class="cc BTC" title="BTC"> BTC</i></td>
-                  <td>$15,0000 (1)</td>
-                  <td>$124.20 (+10%)</td>
-                  <td>USD,BCH</td>
-                  <td>56</td>
-                  <td>$13,0000 (+23%)</td>
-                  <!-- TODO (Chris) make this code come from the buy type -->
-                  <td>
-                  <a href="trades/btc"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                  <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-                  </td>
-                </tr>
+                
               </tbody>
             </table>
           </div>
@@ -138,6 +125,8 @@
       $this->load->view ('includes/default/footer');
     ?> 
     <!-- Custom scripts for this page-->
+    <script src="assets/js/portfolio/index.js"></script>
+
     <script src="assets/js/sb-admin-datatables.min.js"></script>
   </div>
 </body>

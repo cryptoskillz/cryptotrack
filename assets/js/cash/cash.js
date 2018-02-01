@@ -2,7 +2,7 @@ $( document ).ready(function()
 {
 
 	var cashtrades = lscache.get("cashtrades");
-    console.log( cashtrades);
+    //console.log( cashtrades);
     //console.log(cashexchangelist);
 	 //ide the cash select
 	 $('#CashActionGroup').hide();
