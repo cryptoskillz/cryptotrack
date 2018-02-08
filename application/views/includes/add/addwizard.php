@@ -33,11 +33,14 @@
                                 <label for="formAssetType">Asset Type</label>
                                     <select class="form-control" id="formAssetType" required="">
                                       <option value="">Please Select</option>
-                                      <option value="cm">Cloud Mining Contract</option>
-                                      <option value="hm">Hardware Mining</option>
                                       <option value="coin">Coin</option>
-                                      <option value="ico">ICO</option>
-                                       <option value="stk">Staking</option>
+                                      <!--
+                                      disbaled for this release
+                                      <option value="cm">Cloud Mining Contract *beta</option>
+                                      <option value="hm">Hardware Mining *beta</option>
+                                      <option value="ico">ICO *beta</option>
+                                       <option value="stk">Staking *beta</option>
+                                       -->
                                     </select>
                                 </div>
                                 <!-- for cloud mining contracts -->
@@ -66,9 +69,10 @@
                             <div id="wizardstep2coin">
                                 <h4>Coin Information:</h4>
                                 <div class="form-group">
-                                    <label for="formCoinType">Coin Type</label>
+                                    <label for="formCoinType">Coin</label>
                                     <select class="form-control" id="formCoinType" required="">
                                     </select>
+                                    <span id="formCoinTypeInfo"></span>
                                 </div>
                                 <div class="form-group" id="coinexchangegroup">
                                     <label for="formCoinExchange">Exchange </label>
@@ -80,12 +84,20 @@
                                   <!-- auto populate -->
                                   <label for="cloudminerhashpower">Quantity</label>
                                   <input type="text" name="coinquantity" placeholder="Enter the quantity" class="form-control" id="coinquantity">  
-                                  <label for="cointoexchangefee">Fees (*to get to exchange)</label>
+                                  <label for="cointoexchangefee">Fee ( transferring coin to exchange)</label>
                                   <input type="text" name="cointoexchangefee" placeholder="Enter the fee" class="form-control" id="cointoexchangefee"> 
-                                  <label for="coinexchangefee">Fees (*to get from exchange)</label>
-                                  <input type="text" name="coinexchangefee" placeholder="Enter the fee" class="form-control" id="coinexchangefee">                                    
-                                  <label for="cloudminerfee">Price  (*to get from exchange)</label>
-                                  <input type="text" name="coinexchangeprice" placeholder="Enter the price" class="form-control" id="coinexchangeprice">  
+                                  <label for="coinfromexchangefee">Fee ( transferring coin from exchange)</label>
+                                  <input type="text" name="coinfromexchangefee" placeholder="Enter the fee" class="form-control" id="coinfromexchangefee"> 
+                                  <label for="coinexchangefee" id ="coinexchangefeelabel">Trading Fee </label>
+                                  <input type="text" name="coinexchangefee" placeholder="" class="form-control" id="coinexchangefee" disabled>                                    
+                                  <label for="coinexchangepricebtc">Price (BTC) </label>
+                                  <input type="text" name="coinexchangepricebtc" placeholder="Enter the price" class="form-control" id="coinexchangepricebtc" disabled>  
+                                  <label for="coinexchangepricefiat">Price (USD) </label>
+                                  <input type="text" name="coinexchangepricefiat" placeholder="Enter the price" class="form-control" id="coinexchangepricefiat" disabled>  
+                                   <label for="coinexchangepricefiat">Total Cost (BTC) </label>
+                                  <input type="text" name="totalcostbtc" placeholder="" class="form-control" id="totalcostbtc" disabled>  
+                                   <label for="coinexchangepricefiat">Total Cost (USD) </label>
+                                  <input type="text" name="totalcostfiat" placeholder="" class="form-control" id="totalcostfiat" disabled>                                   
                                   <label for="formcoinhowtopay">Payment Type</label>
                                     <select class="form-control" id="formcoinhowtopay" required="">
                                       <option value="">Please Select</option>
@@ -95,10 +107,11 @@
                                       <option value="4">Cold storage (LTC)</option>
                                      
                                     </select> 
-                               
+                               <!--
                                   <label for="formcoinhowtopay">Price  (*to get from exchange)</label>
 
                                 <input type="text" name="formcoinhowtopay" placeholder="Enter the price" class="form-control" id="coinexchangeprice">  
+                                -->
                                   <label for="formcoinhowtopay">Where is it?</label>
                                     <select class="form-control" id="formcoinhowtopay" required="">
                                       <option value="">Please Select</option>
@@ -106,7 +119,7 @@
                                       <option value="3">Cold storage</option>
                                        <option value="4">Hot Wallet</option>
                                       <option value="5">On Exchange</option>
-                                       <option value="6">Coins property wallet</option>
+                                       <option value="6">Coins wallet</option>
                                     
                                     </select> 
                                 </div>                                  

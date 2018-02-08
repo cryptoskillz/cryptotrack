@@ -11,3 +11,5 @@
   <link rel="stylesheet" href="<?php echo base_url();?>/assets/webfont/cryptocoins.css">
 
   <link href="<?php echo base_url();?>assets/css/sb-admin.css" rel="stylesheet">
+  <link href="<?php echo base_url();?>assets/css/jquery.growl.css" rel="stylesheet">
+

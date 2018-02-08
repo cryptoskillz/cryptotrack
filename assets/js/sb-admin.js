@@ -3,21 +3,8 @@
 
 
   //get the current prices
-      var currencies = 'BTC,XRP,ETH,BCH,ADA,LTC,NEM,XLM,TRX,IOTA'
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() 
-      {
-        if (this.readyState == 4 && this.status == 200) 
-        {
-            var obj = JSON.parse(this.response)
-            //console.log(obj)
-        }
+      //var currencies = 'BTC,XRP,ETH,BCH,ADA,LTC,NEM,XLM,TRX,IOTA'
 
-       // table.draw();
-
-      };
-      xhttp.open("GET", "https://api.coinmarketcap.com/v1/ticker/", true);
-      xhttp.send();
    
 
 

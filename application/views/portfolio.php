@@ -44,7 +44,8 @@
               <div class="card-body-icon">
                 <i class="fa fa-fw fa-bitcoin"></i>
               </div>
-              <div class="mr-5">Portfolio total value 4.3 BTC</div>
+              <div class="mr-5">Total value <span id="btctotal"></span> BTC</div>
+              <div class="mr-5">Total value $<span id="cashtotal"></span></div>
             </div>
            
           </div>
@@ -57,7 +58,7 @@
               <div class="card-body-icon">
                 <i class="fa fa-fw fa-bitcoin"></i>
               </div>
-              <div class="mr-5">Portfolio trading amount 1.2 BTC</div>
+              <div class="mr-5">Portfolio trading amount <span id="portbtctotal"></span> BTC</div>
             </div>
             
           </div>
@@ -77,10 +78,9 @@
                 <tr>
                   <th>Type</th>
                   <th>Asset</th>
-                  <th>Holdings</th>
+                  <th>Quantity</th>
+                  <th>Cost</th>
                   <th>Profit</th>
-                  <th>Pairs</th>
-                  <th>Purchases</th>
                   <th>Current Price</th>
                   <th>Actions</th>
                 </tr>
@@ -89,10 +89,9 @@
                 <tr>
                   <th>Type</th>
                   <th>Asset</th>
-                  <th>Holdings</th>
+                  <th>Quantity</th>
+                  <th>Cost</th>
                   <th>Profit</th>
-                  <th>Pairs</th>
-                  <th>Purchases</th>
                   <th>Current Price</th>
                   <th>Actions</th>
                 </tr>

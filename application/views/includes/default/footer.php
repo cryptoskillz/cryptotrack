@@ -1,4 +1,5 @@
 	<!-- the different JSON object we use to build lists and such, these will be fetched from the ingetions engine and moved to local storage for usage -->
+   
     <script src="<?php echo base_url();?>assets/js/data/coinlist.js"></script>
     <script src="<?php echo base_url();?>assets/js/data/exchangelist.js"></script>
     <script src="<?php echo base_url();?>assets/js/data/cashexchangelist.js"></script>
@@ -12,4 +13,4 @@
     <!--<script src="assets/js/sb-admin.min.js"></script>-->
     <!--<script src="<?php echo base_url();?>assets/js/lockr.js"></script>   -->
     <script src="<?php echo base_url();?>assets/js/sb-admin.js"></script>
-
+    <script src="<?php echo base_url();?>assets/js/jquery.growl.js"></script>

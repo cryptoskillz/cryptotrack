@@ -1,5 +1,25 @@
 
 var atStep = 1;
+var tradingfee = 0.1;
+var coinpricebtc = 0;
+var coinpricefiat = 0;
+
+ //TODO refactor this so the price fetching is in one place
+  var coinmarketcapdata= {}
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() 
+  {
+    if (this.readyState == 4 && this.status == 200) 
+    {
+       coinmarketcapdata = JSON.parse(this.response)
+       //console.log(coinmarketcapdata)
+
+    }
+  };
+  xhttp.open("GET", "https://api.coinmarketcap.com/v1/ticker/", true);
+  xhttp.send();
+
+
 //debug
 //console.log(coinlist)
 
@@ -83,6 +103,11 @@ $(function () {
 
 jQuery(document).ready(function() {
 
+    var dateNow = new Date();
+    $('#datetimepicker1').datetimepicker({
+        defaultDate:dateNow
+    });
+
     //init
     $('#formDateBought').hide();
     $('#formDateSold').hide();
@@ -104,7 +129,7 @@ jQuery(document).ready(function() {
 
         var obj = {}
         //process the coin
-         var assetType = $('#formAssetType').val();
+        var assetType = $('#formAssetType').val();
         if (assetType == "coin")
         {
             obj.assettype = 'Coin';
@@ -112,10 +137,13 @@ jQuery(document).ready(function() {
             obj.enddate = $('#datetimepicker2').find("input").val();
             obj.quantity = $('#coinquantity').val();
             obj.cointype = $('#formCoinType').val();
-            obj.exchnage = $('#coinexchangefee').val();
+            obj.exchange = $('#formCoinExchange').val();
             obj.fee = $('#coinexchangefee').val();
-            obj.cost = $('#coinexchangeprice').val();
-            /* refactor this so it gets it from the API*/
+            obj.coinexchangepricebtc = $('#coinexchangepricebtc').val();
+            obj.coinexchangepricefiat = $('#coinexchangepricefiat').val();
+            obj.totalcostbtc = $('#totalcostbtc').val();
+            obj.totalcostfiat = $('#totalcostfiat').val();           
+           /* refactor this so it gets it from the API*/
             if ($('#formcoinhowtopay').val()  == 1)
                obj.paidfrom = "Portfolio (BTC)"
             if ($('#formcoinhowtopay').val()  == 2)
@@ -124,9 +152,9 @@ jQuery(document).ready(function() {
                obj.paidfrom = "Cold storage (BTC)";                
             if ($('#formcoinhowtopay').val()  == 4)
                 obj.paidfrom = "Cold storage (LTC)"
-
+            console.log(obj);
             var tmpObj = [];
-            if (portfolio != null)
+            if ((portfolio != null) && (portfolio != ''))
             {
                 tmpObj = JSON.parse(portfolio);
             }
@@ -134,7 +162,7 @@ jQuery(document).ready(function() {
             //console.log(tmpObj)
             portfolio = JSON.stringify(tmpObj);
             lscache.set('portfolio',portfolio);
-
+             $.growl({ title: "Added", message: "Trade has been added" });
 
         }  
     });
@@ -316,20 +344,103 @@ jQuery(document).ready(function() {
 
     //check for a coin slection
     $("#formCoinType" ).change(function() {
-        //alert($(this).val())
-         $('#coinexchangegroup').show();
-         $('#formCoinExchange').empty();
-         $('#formCoinExchange').append('<option value="" >Please select</option>')
-         $.each(exchangelist, function(i, item) {
-            $('#formCoinExchange').append('<option value="'+ item.id +'" >'+ item.name +'</option>')
+         //get the selected coin
+         //var selectedcoin = $(this).val()
+         //get the selected coin text
 
+        
+        
+
+         
+         
+         //note this is a pretty crappy way to get the value we should be geting it from the arrays but for now it works.
+         var selectedcointext = $(this).find('option:selected').text();
+         //removes the 
+         selectedcoin = selectedcointext.split(" ");
+         var coinmarketcapurl = "https://coinmarketcap.com/currencies/"+selectedcoin[0]+"/"
+         $('#formCoinTypeInfo').html("<a href='"+coinmarketcapurl+"' target='_blank'>"+coinmarketcapurl+"</a>");
+         //show the exchanges
+         $('#coinexchangegroup').show();
+         //empty the list
+         $('#formCoinExchange').empty();
+         //add a select option
+         $('#formCoinExchange').append('<option value="" >Please select</option>')
+
+         //loop through the list of exchanges
+         //TODO the exhcange list has to be consumed by the ingestion server when we code it.
+
+         //loop the exchnage list
+         $.each(exchangelist, function(i, item) {
+            //we have not found this coin on this exchnage to set a flag to false
+            var notfound = 0;
+            //loop coins this exchnage supports
+            $.each(item.coins, function(i2, item2) {
+                //debug
+                //console.log(item2)
+                //console.log($('#formCoinType').val());
+
+                //check if this is a match 
+                if ((item2 == $('#formCoinType').val()) && (notfound == 0))
+                {
+                    //update the found flag
+                    notfound = 1;
+                    //add it to the list.
+                    $('#formCoinExchange').append('<option value="'+ item.id +'" >'+ item.name +'</option>')
+                }
+             });
            // console.log(i + " : " + item.id + " : "+ item.symbol)
         });
     });
 
+    $('#coinquantity').change(function() {
+        //debug
+       //console.log(tradingfee);
+       //console.log(coinpricebtc);
+       var quantity = $('#coinquantity').val();
+       var pricefiat = coinpricefiat * quantity;
+       var pricebtc = coinpricebtc * quantity;
+       var tradingfeepaid = pricebtc / 100 * tradingfee;
+       $('#totalcostbtc').val(pricebtc);
+       $('#totalcostfiat').val(pricefiat);
+       $('#coinexchangefee').val(tradingfeepaid);
+
+
+
+    })
+
 
     //check for a exchange slection
     $("#formCoinExchange" ).change(function() {
+        //console.log(coinmarketcapdata)
+       
+        $.each(exchangelist, function(i, item) {
+            //check for the right array item
+            if (item.id ==  $('#formCoinExchange').val())
+            {
+                tradingfee = item.tradingfee;
+                $("#coinexchangefeelabel").text("Trading Fee "+tradingfee+'%')
+            }
+            
+        });
+
+        //set the price
+        $.each(coinmarketcapdata, function(i, item) 
+        {   
+
+            if ($('#formCoinType').val() == item.symbol)
+            {
+                //debug
+                //console.log($('#formCoinType').val())
+                //console.log(item)
+                coinpricebtc = item.price_btc;
+                coinpricefiat= item.price_usd;
+                $('#coinexchangepricebtc').val(item.price_btc) 
+                $('#coinexchangepricefiat').val(item.price_usd) 
+
+            }
+            
+        });
+
         $('#coindetailsroup').show();
     });
 
