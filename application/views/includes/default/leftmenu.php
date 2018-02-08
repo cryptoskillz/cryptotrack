@@ -44,6 +44,10 @@
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out"></i>Logout</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/cryptoskillz/cryptotrack" target="_blank">
+            <i class="fa fa-fw fa-sign-out"></i>Source Code</a>
+        </li>        
       </ul>
 
     </div>

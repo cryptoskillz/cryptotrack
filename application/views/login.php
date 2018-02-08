@@ -57,7 +57,7 @@
             <div id="seederror"></div>
             <button type="button" class="btn btn-primary" value="" id="loginbutton" name="loginbutton">Login</button>
             <span>
-              The whitepaper for this application (very early draft) can be found here for <a href="https://docs.google.com/document/d/1iL6R_-WgYI-v_KM3CmFGR7EV8dwvCOqN4vv9_qrmsiY" target="_blank">review</a>
+              A basic concept for this application (very early draft) can be found here for <a href="https://docs.google.com/document/d/1iL6R_-WgYI-v_KM3CmFGR7EV8dwvCOqN4vv9_qrmsiY" target="_blank">review</a>
             </span>
           </div>
         </div>
